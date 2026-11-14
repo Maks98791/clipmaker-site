@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ClipMaker: returning from TikTok</title>
+</head>
+<body>
+<p>Returning to ClipMaker...</p>
+<p>If nothing happens, ClipMaker is not running on this computer (or its SSH tunnel is closed).</p>
+<script>
+// TikTok only redirects to https addresses. This page passes the sign-in result on to the
+// ClipMaker instance on the owner's own computer, unchanged. Nothing is stored or sent elsewhere.
+location.replace("http://localhost:8000/oauth/tiktok/callback" + location.search);
+</script>
+</body>
+</html>
